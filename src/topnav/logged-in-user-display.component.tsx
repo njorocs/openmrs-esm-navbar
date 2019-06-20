@@ -23,7 +23,8 @@ export default function LoggedInUserDisplay(props: LoggedInUserDisplayProps) {
   }, []);
 
   return (
-    <a href="/openmrs/spa"><i className="fa fa-user text-primary"> </i>  
+    <a href="/openmrs/spa">
+      <i className="fa fa-user text-primary"> </i>
       {currentSession && currentSession.user ? (
         <span className={styles.user}>{currentSession.user.display}</span>
       ) : (
