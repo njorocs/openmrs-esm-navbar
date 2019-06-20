@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./topnav.css";
 
 export default function LoggedInUserDisplay(props: LoggedInUserDisplayProps) {
   const [currentSession, setCurrentSession] = React.useState(null);
@@ -22,9 +23,9 @@ export default function LoggedInUserDisplay(props: LoggedInUserDisplayProps) {
   }, []);
 
   return (
-    <a href="/openmrs/spa">
+    <a href="/openmrs/spa"><i className="fa fa-user text-primary"> </i>  
       {currentSession && currentSession.user ? (
-        <span>{currentSession.user.display}</span>
+        <span className={styles.user}>{currentSession.user.display}</span>
       ) : (
         <span>-</span>
       )}

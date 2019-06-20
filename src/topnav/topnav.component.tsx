@@ -23,11 +23,12 @@ export default function Topnav(props: TopnavProps) {
           </NavLink>
         </li>
         <li>
-          <LoggedInUserDisplay />
+         <LoggedInUserDisplay />
         </li>
         <li>
           <a href="/openmrs/appui/header/logout.action?successUrl=openmrs">
-            <span>Logout</span>
+          <i className="fa fa-sign-out-alt text-danger"> </i>
+            <span className={styles.user}>Logout</span>
           </a>
         </li>
       </ul>
